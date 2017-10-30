@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B24A20A41FA68AE70069C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20A31FA68AE70069C4DA /* AppDelegate.swift */; };
+		B24A20A91FA68AE70069C4DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24A20A71FA68AE70069C4DA /* Main.storyboard */; };
+		B24A20AB1FA68AE70069C4DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24A20AA1FA68AE70069C4DA /* Assets.xcassets */; };
+		B24A20AE1FA68AE70069C4DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24A20AC1FA68AE70069C4DA /* LaunchScreen.storyboard */; };
+		B24A20B81FA68F910069C4DA /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20B71FA68F910069C4DA /* TweetViewController.swift */; };
+		B24A20BA1FA690520069C4DA /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20B91FA690520069C4DA /* ComposeViewController.swift */; };
+		B24A20BE1FA6928B0069C4DA /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20BD1FA6928B0069C4DA /* AccountsViewController.swift */; };
+		B24A20C01FA692E80069C4DA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20BF1FA692E80069C4DA /* FeedViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B24A20A01FA68AE70069C4DA /* SocialApp 7.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialApp 7.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24A20A31FA68AE70069C4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B24A20A81FA68AE70069C4DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B24A20AA1FA68AE70069C4DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B24A20AD1FA68AE70069C4DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B24A20AF1FA68AE70069C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24A20B71FA68F910069C4DA /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetViewController.swift; path = "SocialApp 7.3/TweetViewController.swift"; sourceTree = "<group>"; };
+		B24A20B91FA690520069C4DA /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = "SocialApp 7.3/ComposeViewController.swift"; sourceTree = "<group>"; };
+		B24A20BD1FA6928B0069C4DA /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		B24A20BF1FA692E80069C4DA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B24A209D1FA68AE70069C4DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B24A20971FA68AE60069C4DA = {
+			isa = PBXGroup;
+			children = (
+				B24A20A21FA68AE70069C4DA /* SocialApp 7.3 */,
+				B24A20A11FA68AE70069C4DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B24A20A11FA68AE70069C4DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B24A20A01FA68AE70069C4DA /* SocialApp 7.3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B24A20A21FA68AE70069C4DA /* SocialApp 7.3 */ = {
+			isa = PBXGroup;
+			children = (
+				B24A20A31FA68AE70069C4DA /* AppDelegate.swift */,
+				B24A20A71FA68AE70069C4DA /* Main.storyboard */,
+				B24A20AA1FA68AE70069C4DA /* Assets.xcassets */,
+				B24A20AC1FA68AE70069C4DA /* LaunchScreen.storyboard */,
+				B24A20BB1FA690F50069C4DA /* View Controllers */,
+				B24A20BC1FA691CD0069C4DA /* Supporting Files */,
+			);
+			path = "SocialApp 7.3";
+			sourceTree = "<group>";
+		};
+		B24A20BB1FA690F50069C4DA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B24A20B71FA68F910069C4DA /* TweetViewController.swift */,
+				B24A20B91FA690520069C4DA /* ComposeViewController.swift */,
+				B24A20BD1FA6928B0069C4DA /* AccountsViewController.swift */,
+				B24A20BF1FA692E80069C4DA /* FeedViewController.swift */,
+			);
+			name = "View Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B24A20BC1FA691CD0069C4DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B24A20AF1FA68AE70069C4DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B24A209F1FA68AE70069C4DA /* SocialApp 7.3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24A20B21FA68AE70069C4DA /* Build configuration list for PBXNativeTarget "SocialApp 7.3" */;
+			buildPhases = (
+				B24A209C1FA68AE70069C4DA /* Sources */,
+				B24A209D1FA68AE70069C4DA /* Frameworks */,
+				B24A209E1FA68AE70069C4DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SocialApp 7.3";
+			productName = "SocialApp 7.3";
+			productReference = B24A20A01FA68AE70069C4DA /* SocialApp 7.3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B24A20981FA68AE60069C4DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Patricia Toles";
+				TargetAttributes = {
+					B24A209F1FA68AE70069C4DA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B24A209B1FA68AE70069C4DA /* Build configuration list for PBXProject "SocialApp 7.3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B24A20971FA68AE60069C4DA;
+			productRefGroup = B24A20A11FA68AE70069C4DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B24A209F1FA68AE70069C4DA /* SocialApp 7.3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B24A209E1FA68AE70069C4DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24A20AE1FA68AE70069C4DA /* LaunchScreen.storyboard in Resources */,
+				B24A20AB1FA68AE70069C4DA /* Assets.xcassets in Resources */,
+				B24A20A91FA68AE70069C4DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B24A209C1FA68AE70069C4DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24A20BA1FA690520069C4DA /* ComposeViewController.swift in Sources */,
+				B24A20BE1FA6928B0069C4DA /* AccountsViewController.swift in Sources */,
+				B24A20C01FA692E80069C4DA /* FeedViewController.swift in Sources */,
+				B24A20B81FA68F910069C4DA /* TweetViewController.swift in Sources */,
+				B24A20A41FA68AE70069C4DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B24A20A71FA68AE70069C4DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B24A20A81FA68AE70069C4DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B24A20AC1FA68AE70069C4DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B24A20AD1FA68AE70069C4DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B24A20B01FA68AE70069C4DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B24A20B11FA68AE70069C4DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B24A20B31FA68AE70069C4DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SocialApp 7.3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptoles.SocialApp-7-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		B24A20B41FA68AE70069C4DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SocialApp 7.3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptoles.SocialApp-7-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B24A209B1FA68AE70069C4DA /* Build configuration list for PBXProject "SocialApp 7.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24A20B01FA68AE70069C4DA /* Debug */,
+				B24A20B11FA68AE70069C4DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24A20B21FA68AE70069C4DA /* Build configuration list for PBXNativeTarget "SocialApp 7.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24A20B31FA68AE70069C4DA /* Debug */,
+				B24A20B41FA68AE70069C4DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B24A20981FA68AE60069C4DA /* Project object */;
+}
