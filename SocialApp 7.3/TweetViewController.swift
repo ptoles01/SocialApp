@@ -13,7 +13,7 @@ class TweetViewController: UIViewController {
     @IBOutlet weak var tweetAuthorAvatar: UIImageView!
     @IBOutlet weak var tweetAuthorName: UILabel!
     @IBOutlet weak var tweetText: UITextView!
-    @IBAction func dismissView(sender:AnyObject){
+    @IBAction func dismissView(_ sender:AnyObject){
         
     }
 

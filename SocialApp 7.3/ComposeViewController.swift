@@ -14,7 +14,7 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var postActivity: UIActivityIndicatorView!
     
-    @IBAction func dismissView(sender:AnyObject){
+    @IBAction func dismissView(_ sender:AnyObject){
         
     }
     override func viewDidLoad() {

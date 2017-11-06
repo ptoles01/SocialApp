@@ -20,40 +20,40 @@ class AccountsViewController: UITableViewController {
         accountStore = ACAccountStore()
         
         
-        let accountType : ACAccountType = accountStore!.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        let accountType : ACAccountType = accountStore!.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierTwitter)
         
         
-        accountStore?.requestAccessToAccountsWithType(accountType, options: nil,
+        accountStore?.requestAccessToAccounts(with: accountType, options: nil,
                                                       completion: { granted, error in
                                                         
                                                         if(granted)
                                                         {
-                                                            self.twitterAccounts = self.accountStore!.accountsWithAccountType(accountType)
+                                                            self.twitterAccounts = self.accountStore!.accounts(with: accountType)
                                                             
                                                             
                                                             if (self.twitterAccounts!.count == 0)
                                                             {
                                                                 let noAccountsAlert : UIAlertController = UIAlertController(title: "No Accounts Found",
                                                                     message: "No Twitter accounts were found.",
-                                                                    preferredStyle: UIAlertControllerStyle.Alert)
+                                                                    preferredStyle: UIAlertControllerStyle.alert)
                                                                 
                                                                 let dismissButton : UIAlertAction = UIAlertAction(title: "Okay",
-                                                                style: UIAlertActionStyle.Cancel) {
+                                                                style: UIAlertActionStyle.cancel) {
                                                                     alert in
-                                                                    noAccountsAlert.dismissViewControllerAnimated(true, completion: nil)
+                                                                    noAccountsAlert.dismiss(animated: true, completion: nil)
                                                                 }
                                                                 
                                                                 noAccountsAlert.addAction(dismissButton)
                                                                 
-                                                                dispatch_async(dispatch_get_main_queue()) {
-                                                                    self.presentViewController(noAccountsAlert, animated: true, completion: nil) }
+                                                                DispatchQueue.main.async {
+                                                                    self.present(noAccountsAlert, animated: true, completion: nil) }
                                                                 
                                                                 
                                                                 
                                                             }
                                                             else
                                                             {
-                                                                dispatch_async(dispatch_get_main_queue()) {
+                                                                DispatchQueue.main.async {
                                                                     self.tableView.reloadData()
                                                                     
                                                                 }
@@ -77,14 +77,14 @@ class AccountsViewController: UITableViewController {
     
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int)
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
         -> Int {
             
             // Return the number of rows in the section.
