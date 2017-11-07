@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Accounts
+import Social
 
 class FeedViewController: UITableViewController {
     
@@ -33,22 +35,29 @@ class FeedViewController: UITableViewController {
             let requestURL =
                 URL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
             
-            let request = SLRequest(forServiceType: SLServiceTypeTwitter,
+            if let request = SLRequest(forServiceType: SLServiceTypeTwitter,
                                     requestMethod: SLRequestMethod.GET,
-                                    URL: requestURL,
-                                    parameters: nil)
+                                    url: requestURL,
+                                    parameters: [:]){
             
             request.account = account
-            request.performRequestWithHandler() {
+            request.perform() {
                 responseData, urlResponse, error in
                 
-                if(urlResponse.statusCode == 200) {
-                    var jsonParseError : NSError?
-                    self.tweets = NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableContainers,
-                        error: &jsonParseError) as? NSMutableArray
+                if(urlResponse?.statusCode == 200) {
+                    if(urlResponse?.statusCode == 200) {
+                        do{
+                            self.tweets = try JSONSerialization.jsonObject(with: responseData!, options: JSONSerialization.ReadingOptions.mutableContainers
+                                ) as? NSMutableArray
+
+                        }
+                        catch let error as NSError{
+                            print ("json eror: \(error.localizedDescription)")
+                        }
+                    }
                 }
                 
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async() {
                     self.tableView.reloadData()
                 }
             }
@@ -58,19 +67,19 @@ class FeedViewController: UITableViewController {
 
  
 
-    override func didReceiveMemoryWarning() {
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+        func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
@@ -130,4 +139,5 @@ class FeedViewController: UITableViewController {
     }
     */
 
+}
 }

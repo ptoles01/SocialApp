@@ -28,7 +28,7 @@ class AccountsViewController: UITableViewController {
                                                         
                                                         if(granted)
                                                         {
-                                                            self.twitterAccounts = self.accountStore!.accounts(with: accountType)
+                                                            self.twitterAccounts = self.accountStore!.accounts(with: accountType)! as NSArray
                                                             
                                                             
                                                             if (self.twitterAccounts!.count == 0)

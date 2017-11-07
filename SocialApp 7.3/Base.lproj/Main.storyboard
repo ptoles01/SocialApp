@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z5v-Im-a2I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z5v-Im-a2I">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,10 +25,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AccountCell" id="SFm-6i-z12">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SFm-6i-z12" id="rfm-O7-SnH">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -61,7 +61,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Arz-Bz-7sS" id="Yvh-hZ-JV9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -99,10 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose A Tweet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA5-e0-3Hi">
-                                <rect key="frame" x="16" y="20" width="254" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="254" id="5js-QY-bWl"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="20" width="246.5" height="55"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,10 +121,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFN-fv-2I0">
-                                <rect key="frame" x="262" y="275" width="86" height="29"/>
+                                <rect key="frame" x="262" y="275" width="44" height="29"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="bMG-Ba-dFQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bMG-Ba-dFQ"/>
                                     <constraint firstAttribute="height" constant="29" id="ifY-yg-80r"/>
                                 </constraints>
                                 <state key="normal" title="Post"/>
@@ -142,9 +139,12 @@
                             <constraint firstItem="ShG-f8-dZm" firstAttribute="trailing" secondItem="IkN-O4-BKN" secondAttribute="trailingMargin" id="0fC-Cc-YQ4"/>
                             <constraint firstItem="cA5-e0-3Hi" firstAttribute="top" secondItem="IkN-O4-BKN" secondAttribute="top" constant="20" symbolic="YES" id="5e2-U8-uoj"/>
                             <constraint firstItem="cA5-e0-3Hi" firstAttribute="leading" secondItem="IkN-O4-BKN" secondAttribute="leadingMargin" id="C3g-JZ-rME"/>
+                            <constraint firstItem="Omr-Ej-4HE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IkN-O4-BKN" secondAttribute="leadingMargin" id="CdD-Jy-DfJ"/>
                             <constraint firstItem="UOU-dT-hSj" firstAttribute="top" secondItem="eFN-fv-2I0" secondAttribute="bottom" priority="250" constant="294" id="ISn-dc-cH5"/>
-                            <constraint firstItem="eFN-fv-2I0" firstAttribute="leading" secondItem="IkN-O4-BKN" secondAttribute="leading" constant="262" id="IkY-Qw-5Zv"/>
+                            <constraint firstItem="eFN-fv-2I0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IkN-O4-BKN" secondAttribute="leading" id="IkY-Qw-5Zv"/>
                             <constraint firstItem="eFN-fv-2I0" firstAttribute="top" secondItem="ShG-f8-dZm" secondAttribute="bottom" constant="13" id="OGq-sR-pKI"/>
+                            <constraint firstAttribute="trailing" secondItem="eFN-fv-2I0" secondAttribute="trailing" constant="69" id="PeH-1K-ia1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cA5-e0-3Hi" secondAttribute="trailing" constant="20" symbolic="YES" id="Zhx-vP-NoC"/>
                             <constraint firstItem="ShG-f8-dZm" firstAttribute="top" secondItem="cA5-e0-3Hi" secondAttribute="bottom" constant="17" id="dl5-KG-do3"/>
                             <constraint firstItem="cA5-e0-3Hi" firstAttribute="leading" secondItem="ShG-f8-dZm" secondAttribute="leading" id="t2H-Zh-B6T"/>
                             <constraint firstItem="ShG-f8-dZm" firstAttribute="top" secondItem="Omr-Ej-4HE" secondAttribute="bottom" constant="42" id="uR9-1r-F5h"/>
@@ -174,10 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZq-hL-kLP">
-                                <rect key="frame" x="277" y="20" width="82" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="8WZ-XQ-pia"/>
-                                </constraints>
+                                <rect key="frame" x="311" y="20" width="48" height="29"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="dismissView:" destination="lVH-Z5-4V6" eventType="touchUpInside" id="QPv-d9-7Lk"/>
@@ -189,8 +186,8 @@
                                     <constraint firstAttribute="width" constant="82" id="cbO-MA-kXf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweetAuthorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-un-y8z">
-                                <rect key="frame" x="97" y="20" width="179" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="tweetAuthorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-un-y8z">
+                                <rect key="frame" x="97" y="20" width="213" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="vjf-J4-OSX"/>
                                 </constraints>
