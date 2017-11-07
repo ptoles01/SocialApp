@@ -9,16 +9,54 @@
 import UIKit
 
 class FeedViewController: UITableViewController {
+    
+    // p. 253
+    var selectedAccount : ACAccount!
+    var tweets : NSMutableArray?
+    var imageCache : NSCache<AnyObject, AnyObject>?
+    var queue : OperationQueue?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.title = selectedAccount.accountDescription
+        queue = OperationQueue()
+        queue!.maxConcurrentOperationCount = 4
+        retrieveTweets()
+        
     }
+    
+    
+    func retrieveTweets() {
+        tweets?.removeAllObjects()
+        if let account = selectedAccount {
+            let requestURL =
+                URL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
+            
+            let request = SLRequest(forServiceType: SLServiceTypeTwitter,
+                                    requestMethod: SLRequestMethod.GET,
+                                    URL: requestURL,
+                                    parameters: nil)
+            
+            request.account = account
+            request.performRequestWithHandler() {
+                responseData, urlResponse, error in
+                
+                if(urlResponse.statusCode == 200) {
+                    var jsonParseError : NSError?
+                    self.tweets = NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableContainers,
+                        error: &jsonParseError) as? NSMutableArray
+                }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
+    }
+
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
