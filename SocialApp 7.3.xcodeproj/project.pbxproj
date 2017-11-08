@@ -15,6 +15,7 @@
 		B24A20BA1FA690520069C4DA /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20B91FA690520069C4DA /* ComposeViewController.swift */; };
 		B24A20BE1FA6928B0069C4DA /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20BD1FA6928B0069C4DA /* AccountsViewController.swift */; };
 		B24A20C01FA692E80069C4DA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A20BF1FA692E80069C4DA /* FeedViewController.swift */; };
+		B2BD60ED1FB241F200413202 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BD60EC1FB241F200413202 /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B24A20B91FA690520069C4DA /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = "SocialApp 7.3/ComposeViewController.swift"; sourceTree = "<group>"; };
 		B24A20BD1FA6928B0069C4DA /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsViewController.swift; path = "SocialApp 7.3/AccountsViewController.swift"; sourceTree = "<group>"; };
 		B24A20BF1FA692E80069C4DA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = "SocialApp 7.3/FeedViewController.swift"; sourceTree = "<group>"; };
+		B2BD60EC1FB241F200413202 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B24A20B91FA690520069C4DA /* ComposeViewController.swift */,
 				B24A20BF1FA692E80069C4DA /* FeedViewController.swift */,
 				B24A20B71FA68F910069C4DA /* TweetViewController.swift */,
+				B2BD60EC1FB241F200413202 /* TweetCell.swift */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -166,6 +169,7 @@
 				B24A20BA1FA690520069C4DA /* ComposeViewController.swift in Sources */,
 				B24A20BE1FA6928B0069C4DA /* AccountsViewController.swift in Sources */,
 				B24A20C01FA692E80069C4DA /* FeedViewController.swift in Sources */,
+				B2BD60ED1FB241F200413202 /* TweetCell.swift in Sources */,
 				B24A20B81FA68F910069C4DA /* TweetViewController.swift in Sources */,
 				B24A20A41FA68AE70069C4DA /* AppDelegate.swift in Sources */,
 			);

@@ -52,20 +52,60 @@
         <scene sceneID="t3k-gG-hat">
             <objects>
                 <tableViewController title="Feed" id="n3m-lm-JXa" customClass="FeedViewController" customModule="SocialApp_7_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ap-Ob-P7g">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ap-Ob-P7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellFeedTableView" id="Arz-Bz-7sS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellFeedTableView" rowHeight="120" id="Arz-Bz-7sS" userLabel="Table View" customClass="TweetCell" customModule="SocialApp_7_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Arz-Bz-7sS" id="Yvh-hZ-JV9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-PM-jmj">
+                                            <rect key="frame" x="20" y="20" width="79" height="79"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="79" id="kOy-Uj-UrR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykO-XA-49w" userLabel="UserName">
+                                            <rect key="frame" x="107" y="20" width="260" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="cAp-gn-5e6"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="User Name">
+                                                    <attributes>
+                                                        <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-PX-4hl">
+                                            <rect key="frame" x="107" y="62" width="260" height="37"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9bV-PM-jmj" firstAttribute="centerY" secondItem="Yvh-hZ-JV9" secondAttribute="centerY" id="3m2-eR-9an"/>
+                                        <constraint firstItem="9bV-PM-jmj" firstAttribute="leading" secondItem="Yvh-hZ-JV9" secondAttribute="leadingMargin" constant="12" id="55z-I4-gQy"/>
+                                        <constraint firstItem="9bV-PM-jmj" firstAttribute="top" secondItem="Yvh-hZ-JV9" secondAttribute="topMargin" constant="12" id="CUC-6p-bpL"/>
+                                        <constraint firstItem="9bV-PM-jmj" firstAttribute="top" secondItem="ykO-XA-49w" secondAttribute="top" id="EyZ-PY-8pd"/>
+                                        <constraint firstItem="ykO-XA-49w" firstAttribute="trailing" secondItem="c2e-PX-4hl" secondAttribute="trailing" id="UIY-Jy-iLb"/>
+                                        <constraint firstItem="ykO-XA-49w" firstAttribute="trailing" secondItem="Yvh-hZ-JV9" secondAttribute="trailingMargin" id="apO-2P-a3X"/>
+                                        <constraint firstItem="ykO-XA-49w" firstAttribute="leading" secondItem="c2e-PX-4hl" secondAttribute="leading" id="eqx-u8-efI"/>
+                                        <constraint firstItem="ykO-XA-49w" firstAttribute="leading" secondItem="9bV-PM-jmj" secondAttribute="trailing" constant="8" symbolic="YES" id="gs3-ZF-6P2"/>
+                                        <constraint firstItem="9bV-PM-jmj" firstAttribute="bottom" secondItem="c2e-PX-4hl" secondAttribute="bottom" id="hIW-Wk-dAx"/>
+                                        <constraint firstItem="c2e-PX-4hl" firstAttribute="top" secondItem="ykO-XA-49w" secondAttribute="bottom" constant="8" symbolic="YES" id="hVA-z1-FYn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lVH-Z5-4V6" kind="presentation" identifier="ShowTweet" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="Icv-Lb-ZPe"/>
+                                    <segue destination="lVH-Z5-4V6" kind="presentation" identifier="ShowTweets" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="Icv-Lb-ZPe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,17 +114,18 @@
                             <outlet property="delegate" destination="n3m-lm-JXa" id="mj0-vy-Ztl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="1ks-63-7xB" userLabel="Feed">
+                    <navigationItem key="navigationItem" title="Feed" id="1ks-63-7xB" userLabel="Feed">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lO6-RH-lZw">
                             <connections>
                                 <segue destination="EFi-vD-dLZ" kind="presentation" identifier="ComposeTweet" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="AED-vN-j4F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="667"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCN-87-Kpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="140"/>
+            <point key="canvasLocation" x="2290.4000000000001" y="139.880059970015"/>
         </scene>
         <!--Compose-->
         <scene sceneID="seM-WX-6d0">
@@ -159,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UC-hA-hMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2995" y="358"/>
+            <point key="canvasLocation" x="3166" y="519"/>
         </scene>
         <!--Tweet-->
         <scene sceneID="3Rw-Db-TWi">
@@ -180,7 +221,7 @@
                                     <action selector="dismissView:" destination="lVH-Z5-4V6" eventType="touchUpInside" id="QPv-d9-7Lk"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-lZ-KFq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-lZ-KFq">
                                 <rect key="frame" x="12" y="20" width="82" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="cbO-MA-kXf"/>
@@ -235,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luk-MF-2BA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3005" y="-436"/>
+            <point key="canvasLocation" x="3167" y="-244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C7u-lh-kRf">
@@ -256,4 +297,7 @@
             <point key="canvasLocation" x="785" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="150" height="150"/>
+    </resources>
 </document>

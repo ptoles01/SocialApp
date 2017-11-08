@@ -74,25 +74,36 @@ class FeedViewController: UITableViewController {
         
         // MARK: - Table view data source
         
-        func numberOfSections(in tableView: UITableView) -> Int {
+        func numberOfSectionsInTableView(tableView: UITableView) -> Int {
             // #warning Incomplete implementation, return the number of sections
-            return 0
+            return 1
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             // #warning Incomplete implementation, return the number of rows
-            return 0
+            if let tweetCount = self.tweets?.count {
+                return tweetCount
+                
+            }
+            else {
+                return 0
+                
+            }
+           
         }
         
-        /*
-         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-         
-         // Configure the cell...
-         
-         return cell
-         }
-         */
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell( withIdentifier: "TweetCell",
+                                                      for: indexPath) as! TweetCell
+            // Configure the cell...
+            let tweetData = tweets?.object( at: indexPath.row) as! NSDictionary
+            _ = tweetData.object (forKey: "user") as! NSDictionary
+            
+            return cell
+
+        }
+            
+
         
         /*
          // Override to support conditional editing of the table view.
